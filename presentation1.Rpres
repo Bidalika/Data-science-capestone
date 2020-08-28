@@ -1,0 +1,41 @@
+Next word prediction Data science specialization (capstone project)
+========================================================
+author: Bidalika Kumari
+date: 28th Aug 2020
+autosize: true
+transition:linear
+
+Objective 
+========================================================
+
+This presentation features the Next Word Predict app including 
+an introduction<br> to the application user interface and details about the text prediction algorithm.<br>
+The Next Word Predict app is located at:<br>
+- https://bidalika.shinyapps.io/proj/
+
+Introduction to the application:
+========================================================
+
+The algorithm of next word prediction can be shown in 3 steps :
+- Getting and cleaning the data is the first step.
+- Tokenize the data and create the n-grams.
+- Run through n-grams to predict next word.
+
+Shiny application 
+========================================================
+
+- This application is developed using the Next Word Prediction algorithm and it works based on the frequency of the word used next to the input taken from the user.
+- The application will suggest the next word in a sentence using an n-gram algorithm. An n-gram is a contiguous sequence of n words from a given sequence of text.
+- The text used to build the predictive text model came from a large corpus of blogs, news and twitter data. N-grams were extracted from the corpus and then used to build the predictive text model.
+- Various methods were explored to improve speed and accuracy using natural language processing and text mining techniques.
+
+The Predictive Text Model
+========================================================
+The predictive text model was built from a sample of 800,000 lines extracted from a sample of blogs, news and twitter data.<br>
+The sample data was then tokenized and cleaned using the “tm” package and a number of regular expressions using the “gsub” function.<br> As part of the cleaning process the data was converted to lowercase, removed all non-ascii character,<br> URLs, email addresses, twitter handles, hash tags, ordinal numbers, profane words, punctuation and whitespace.<br> The data was then split into tokens(n-grams).
+As text is entered by the user, the algorithm iterates from longest n-gram (4-gram) to shortest (2-gram) to<br>
+detect a match. The predicted next word is considered using the longest, most frequent matching n-gram. <br>
+The algorithm makes use of a simple back-off strategy .<br>
+<center><h2>Thank You</h2></center>
+
+
